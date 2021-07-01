@@ -9,11 +9,11 @@
 }
 
 #calendar {
-    margin: 0 15%;
+    margin: 0 10%;
 }
 
 td.cellTime {
-    width: 15%;
+    width: 10%;
     height: 60px;
     font-weight: bold;
     text-align: right;

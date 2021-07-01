@@ -10,46 +10,44 @@ var saveEl;
 function checkDateTime() {
 
     activeTime = setInterval(function() {
+
+        // Pull date from moment.js.
         dateNow = moment().format("dddd [-] D MMMM YYYY");
-        timeNow = moment().format("HH");
-        //timeNow = 'task'+timeNow;
-        console.log(timeNow);
         $("#currentDate").text(dateNow);
 
-        timeNow = 11;
+        // Pull time from moment.js.
+        timeNow = moment().format("H");
+        console.log(timeNow);
 
         // Check if current time is within business hours. If so, change background color of current timeblock to red.
         if (timeNow < 9 || timeNow > 17) {
             console.log('not business hours');
         } else {
             console.log('business time!');
-            timeNow = 'task' + timeNow;
-            
+
+            // Pulls all elements containing a timeblock.
             taskEl = $('.cellTask');
+
+            // Iterate through each "task" td.
             taskEl.each(function() {
 
+                // Pull number characters from ID to compare to current time.
                 timeBlock = $(this).attr('id');
+                timeBlock = timeBlock.substr(timeBlock.length - 2);
+                if (timeBlock === 'k9') timeBlock = 9;
+                console.log(timeBlock);
 
-                if (timeNow == timeBlock) {
-                    $(this).css("background-color", "tomato");
-                }
+                // Change background color of each timeblock depending on current time.
+
+                if (timeNow > timeBlock) $(this).css("background-color", "grey");
+                else if (timeNow == timeBlock) $(this).css("background-color", "tomato");
+                else $(this).css("background-color", "green");
             })
 
         }
-
     }, 1000);
 }
 
-function smth() {
-
-    var hi = $('#task9a');
-
-    hi.text('Love Challenges, Be Intrigued by Mistakes');
-
-    var cellTaskEl = $('.cellTask');
-
-    console.log(cellTaskEl);
-    cellTaskEl.append(' appended text');
-}
+saveEl = $('.cellSave');
 
 checkDateTime();
