@@ -1,5 +1,5 @@
 * {
-    obackground-color: black;
+    background-color:;
 }
 
 #bar {
@@ -23,7 +23,7 @@ td.cellTime {
 
 td.cellTask {
     height: 75px;
-    background-color: lightgray;
+    background-color: lightgreen;
 }
 td.cellSave {
     width: 10%;
