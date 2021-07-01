@@ -14,9 +14,11 @@
 
 td.cellTime {
     width: 15%;
-    height: 75px;
+    height: 60px;
     font-weight: bold;
     text-align: right;
+    border-right: 3px solid grey;
+    border-top: 1px solid lightgrey;
 }
 
 td.cellTask {
@@ -25,27 +27,13 @@ td.cellTask {
 }
 td.cellSave {
     width: 10%;
-    height: 75px;
     background-color: steelblue;
+    border-left: 3px solid darkblue;
     text-align: center;
     vertical-align: middle;
-}
-
-table {
-    border-collapse: separate;
-}
-
-td {
-    border: solid 1px white;
-}
-
-td:first-child {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
 }
 
 td:last-child {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-

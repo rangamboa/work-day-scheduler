@@ -15,3 +15,7 @@ var hi = $('#task9a');
 
 hi.text('Love Challenges, Be Intrigued by Mistakes');
 
+var cellTaskEl = $('.cellTask');
+
+console.log(cellTaskEl);
+cellTaskEl.append(' appended text');
