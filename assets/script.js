@@ -4,7 +4,8 @@ var dateNow;
 var timeNow;
 var timeBlock;
 var taskEl;
-var saveEl;
+var saveEl; // = document.querySelector('.cellSave');
+var saveId;
 
 // Check current date and time at regular intervals.
 function checkDateTime() {
@@ -12,7 +13,7 @@ function checkDateTime() {
     // Check date/time every second.
     activeTime = setInterval(function() {
 
-        // Pull current date from moment.js.
+        // Pull and display current date from moment.js.
         dateNow = moment().format("dddd[,] DD MMMM YYYY");
         $("#currentDate").text(dateNow);
 
@@ -45,4 +46,17 @@ function checkDateTime() {
     }, 1000);
 }
 
+function saveTask() {
+    
+    console.log(saveEl.length);
+    for (i=0; i<saveEl.length;i++) console.log(saveEl[i])
+    //console.log('event saved for '+ saveId);
+}
+
 checkDateTime();
+
+saveEl = $('.cellSave');
+// saveEl.click(saveTask());
+saveEl.click(function () {
+    alert('hi');
+});
