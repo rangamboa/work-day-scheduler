@@ -1,3 +1,14 @@
 * {
-    
+    obackground-color: black;
+}
+
+#bar {
+    height: 7px;
+    background-color: black;
+    margin-bottom: 25px;
+}
+
+#calendar {
+    width: 80%;
+    margin: 0 5%;
 }
