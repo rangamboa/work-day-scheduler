@@ -29,37 +29,57 @@
 
     <!-- calendar (table) -->
 
-<div id="calendar">
-        <table class="table" style="border: 1px solid black;">
-            <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-            </tr>
-            </thead>
+    <div id="calendar">
+        <table class="table" id="taskTable">
             <tbody>
             <tr>
-                <th scope="row">1</th>
+                <td class="cellTime">9AM</th>
+                <td class="cellTask" id="task9a">Mark</td>
+                <td class="cellSave" id="save9a">💾</td>
+            </tr>
+            <tr>
+                <td class="cellTime">10AM</th>
                 <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <td class="cellSave" id="save10a">💾</td>
             </tr>
             <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
+                <td class="cellTime">11AM</th>
+                <td>Mark</td>
+                <td class="cellSave" id="save11a">💾</td>
+            </tr>            
             <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
+                <td class="cellTime">12PM</th>
+                <td>Mark</td>
+                <td class="cellSave" id="save12p">💾</td>
+            </tr>            
+            <tr>
+                <td class="cellTime">1PM</th>
+                <td>Mark</td>
+                <td class="cellSave" id="save1p">💾</td>
+            </tr>            
+            <tr>
+                <td class="cellTime">2PM</th>
+                <td>Mark</td>
+                <td class="cellSave" id="save2p">💾</td>
+            </tr>            
+            <tr>
+                <td class="cellTime">3PM</th>
+                <td>Mark</td>
+                <td class="cellSave" id="save3p">💾</td>
+            </tr>            
+            <tr>
+                <td class="cellTime">4PM</th>
+                <td>Mark</td>
+                <td class="cellSave" id="save4p">💾</td>
+            </tr>            
+            <tr>
+                <td class="cellTime">5PM</th>
+                <td>Mark</td>
+                <td class="cellSave" id="save5p">💾</td>
             </tr>
             </tbody>
         </table>
-</div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
