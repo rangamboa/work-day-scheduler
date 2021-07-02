@@ -80,8 +80,10 @@ saveEl.click(function(event) {
     // console.log(taskToSave);
 
     localStorage.setItem(savedTask, JSON.stringify(taskToSave));
-
 });
 
+// Retrieve current time and date from moment.js.
 checkDateTime();
+
+// Retrieve and display info from local storage first.
 init();
