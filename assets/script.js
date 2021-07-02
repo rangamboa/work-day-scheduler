@@ -17,7 +17,7 @@ function checkDateTime() {
         dateNow = moment().format("dddd[,] DD MMMM YYYY");
         $("#currentDate").text(dateNow);
 
-        // Pull current hour from moment.js.
+        // Pull current hour from Moment.js.
         timeNow = moment().format("H");
         
         // Check if current time is within business hours (in military time).
