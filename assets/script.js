@@ -3,9 +3,9 @@ var activeTime;
 var dateNow;
 var timeNow;
 var timeBlock;
-var taskEl;
-var inputEl;
-var saveEl;
+var taskEl = $('.cellTask');
+var inputEl = $('input');
+var saveEl = $('.cellSave');;
 
 // Check current date and time at regular intervals.
 function checkDateTime() {
@@ -23,7 +23,7 @@ function checkDateTime() {
         // Check if current time is within business hours (in military time).
 
         // Pulls all elements containing a timeblock.
-        taskEl = $('.cellTask');
+        // taskEl = $('.cellTask'); -- original location before moving to global variable declaration list.
 
         // Iterate through each "task" td.
         taskEl.each(function() {
@@ -50,8 +50,8 @@ function init() {
 
     console.log('initialization');
 
-    inputEl = document.getElementsByTagName('input');
-    console.log(inputEl);
+    // inputEl = document.getElementsByTagName('input'); -- original location before moving to global variable declaration list.
+    // console.log(inputEl);
 
     for (i = 9; i < 18; i++) {
         savedTask = 'task' + i;
@@ -64,9 +64,8 @@ function init() {
     }
 }
 
-
 // Listen for click event on any save button .
-saveEl = $('.cellSave');
+// saveEl = $('.cellSave'); -- original location before moving to global variable declaration list.
 saveEl.click(function(event) {
 
     event.preventDefault();
@@ -78,14 +77,11 @@ saveEl.click(function(event) {
     savedTask = 'task' + taskToSave;
 
     taskToSave = $('#input'+taskToSave).val();
-    console.log(taskToSave);
-
-
+    // console.log(taskToSave);
 
     localStorage.setItem(savedTask, JSON.stringify(taskToSave));
 
 });
-
 
 checkDateTime();
 init();
