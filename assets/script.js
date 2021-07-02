@@ -46,27 +46,45 @@ function checkDateTime() {
     }, 1000);
 }
 
-checkDateTime();
+function init() {
+    console.log('initialization');
+    for (i = 9; i < 18; i++) {
+        savedTask = 'task' + i;
+        //console.log(savedTask);
 
-// Listen for click event on any save button.
+        grabTask = localStorage.getItem(savedTask);
+        console.log(grabTask);
+
+        
+
+        // taskToSave = $(this).attr('id');
+        // taskToSave = taskToSave.substr(taskToSave.length - 2);
+        // if (taskToSave === 'e9') taskToSave = 9;
+    }
+}
+
+
+// Listen for click event on any save button .
 saveEl = $('.cellSave');
-saveEl.click(function () {
+saveEl.click(function(event) {
 
-    // Calculate corresponding task to save to local storage.
+    event.preventDefault();
+    // Obtain task based on corresponding <input> ID to save content to local storage.
     taskToSave = $(this).attr('id');
     taskToSave = taskToSave.substr(taskToSave.length - 2);
     if (taskToSave === 'e9') taskToSave = 9;
     
-    // console.log(taskToSave);
-    //taskToSave = "#input"+taskToSave;
-    //console.log(taskToSave); 
+    savedTask = 'task' + taskToSave;
 
-    whichTask = $('#input'+taskToSave).val();
+    taskToSave = $('#input'+taskToSave).val();
+    console.log(taskToSave);
 
-    console.log(whichTask);
 
-    // selectedTask = $('input').attr(taskToSave);
-    // console.log(selectedTask);
 
+    localStorage.setItem(savedTask, taskToSave);
 
 });
+
+
+checkDateTime();
+init();
