@@ -4,8 +4,8 @@ var dateNow;
 var timeNow;
 var timeBlock;
 var taskEl;
-var saveEl; // = document.querySelector('.cellSave');
-var saveId;
+var inputEl;
+var saveEl;
 
 // Check current date and time at regular intervals.
 function checkDateTime() {
@@ -47,19 +47,20 @@ function checkDateTime() {
 }
 
 function init() {
+
     console.log('initialization');
+
+    inputEl = document.getElementsByTagName('input');
+    console.log(inputEl);
+
     for (i = 9; i < 18; i++) {
         savedTask = 'task' + i;
-        //console.log(savedTask);
 
-        grabTask = localStorage.getItem(savedTask);
+        grabTask = JSON.parse(localStorage.getItem(savedTask));
+        if (grabTask === null) grabTask = '';
         console.log(grabTask);
 
-        
-
-        // taskToSave = $(this).attr('id');
-        // taskToSave = taskToSave.substr(taskToSave.length - 2);
-        // if (taskToSave === 'e9') taskToSave = 9;
+        document.getElementById('input'+i).value = grabTask;
     }
 }
 
@@ -81,7 +82,7 @@ saveEl.click(function(event) {
 
 
 
-    localStorage.setItem(savedTask, taskToSave);
+    localStorage.setItem(savedTask, JSON.stringify(taskToSave));
 
 });
 
