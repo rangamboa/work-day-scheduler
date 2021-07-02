@@ -46,17 +46,27 @@ function checkDateTime() {
     }, 1000);
 }
 
-function saveTask() {
-    
-    console.log(saveEl.length);
-    for (i=0; i<saveEl.length;i++) console.log(saveEl[i])
-    //console.log('event saved for '+ saveId);
-}
-
 checkDateTime();
 
+// Listen for click event on any save button.
 saveEl = $('.cellSave');
-// saveEl.click(saveTask());
 saveEl.click(function () {
-    alert('hi');
+
+    // Calculate corresponding task to save to local storage.
+    taskToSave = $(this).attr('id');
+    taskToSave = taskToSave.substr(taskToSave.length - 2);
+    if (taskToSave === 'e9') taskToSave = 9;
+    
+    // console.log(taskToSave);
+    //taskToSave = "#input"+taskToSave;
+    //console.log(taskToSave); 
+
+    whichTask = $('#input'+taskToSave).val();
+
+    console.log(whichTask);
+
+    // selectedTask = $('input').attr(taskToSave);
+    // console.log(selectedTask);
+
+
 });
