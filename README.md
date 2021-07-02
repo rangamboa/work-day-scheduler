@@ -29,8 +29,13 @@ I mostly used the class sessions and materials to create this site. I also consu
 
 ## Screenshots
 
+First two screenshots were taken "after business hours" so timeblock coloring functionality is not apparent:
+
 ![screenshot 01](assets/work-day-scheduler-screenshot-01.jpg)
 ![screenshot 02](assets/work-day-scheduler-screenshot-02.jpg)
+
+This is how dynamic timeblock coloring would look if the screenshot were taken anytime from 1:00p-1:59p:
+
 ![screenshot 03](assets/work-day-scheduler-screenshot-03.jpg)
 - - -
 © 2021 Ran Gamboa

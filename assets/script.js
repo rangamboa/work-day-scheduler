@@ -19,6 +19,7 @@ function checkDateTime() {
 
         // Pull current hour from moment.js.
         timeNow = moment().format("H");
+        timeNow = 13;
 
         // Check if current time is within business hours (in military time).
 
